@@ -21,8 +21,8 @@ output "public_subnet_ids" {
   value       = [for subnet in aws_subnet.public : subnet.id]
 }
 
-# Subnets privadas
-output "private_subnet_ids" {
-  description = "Lista de IDs das subnets privadas"
-  value       = [for subnet in aws_subnet.private : subnet.id]
-}
+# # Subnets privadas
+# output "private_subnet_ids" {
+#   description = "Lista de IDs das subnets privadas"
+#   value       = [for subnet in aws_subnet.private : subnet.id]
+# }
