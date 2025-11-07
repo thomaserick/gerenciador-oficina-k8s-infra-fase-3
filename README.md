@@ -77,6 +77,8 @@ infra-eks/
 - GitHub Actions configurado com os secrets:
     - `AWS_ACCESS_KEY_ID`
     - `AWS_SECRET_ACCESS_KEY`
+- Alterar as variáveis no arquivo `variables.tf` conforme necessário.
+    - Importante: ajustar `user_name` para o usuário IAM que terá acesso ao cluster EKS.
 - Criar um bucket S3 para o backend remoto do Terraform e alterar o arquivo `backend.tf` com
   os nomes corretos ou remover o `backend.tf` para usar o backend local.
 
@@ -86,7 +88,7 @@ infra-eks/
 
 ```bash
 
-cd infra-rds-postgres
+cd infra-eks
 terraform init
 terraform plan
 terraform apply
